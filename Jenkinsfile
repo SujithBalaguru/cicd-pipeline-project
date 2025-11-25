@@ -38,12 +38,12 @@ pipeline {
     }
     stage('Integration Test'){
         steps {
-          sh 'mvn verify -DskipUnitTests'
+          bat 'mvn verify -DskipUnitTests'
         }
     }
     stage ('Checkstyle Code Analysis'){
         steps {
-            sh 'mvn checkstyle:checkstyle'
+            bat 'mvn checkstyle:checkstyle'
         }
         post {
             success {
