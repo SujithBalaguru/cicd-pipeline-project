@@ -33,7 +33,7 @@ pipeline {
     }
     stage('Unit Test'){
         steps {
-            sh 'mvn test'
+            bat 'mvn clean package'
         }
     }
     stage('Integration Test'){
